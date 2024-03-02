@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10x10 Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table style="width:50%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>password</th>
+                <th>Phone Number</th>
+                <th>Country</th>
+                <th>City</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows -->
+            {{#each data}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.country}}</td>
+                <td>{{this.city}}</td>
+               
+            </tr>
+            {{/each}}
+            {{!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+               
+            </tr>    --}}
+            <!-- Repeat the above row structure for a total of 10 rows -->
+
+        </tbody>
+    </table>
+
+</body>
+</html>
